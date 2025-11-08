@@ -1,0 +1,237 @@
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&display=swap');
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    /* Prevent scrolling */
+    height: 100%
+}
+
+.main {
+    position: fixed;
+    height: 100vh;
+    width: 100%;
+    background-image: url(https://static.vecteezy.com/system/resources/previews/042/952/198/non_2x/gaming-background-and-illustrations-retro-game-elements-in-graffiti-style-vector.jpg);
+    background-size: cover;
+    background-position: center;
+    overflow-y: scroll;
+}
+
+.main::before {
+    content: "";
+    position: fixed;
+    top: -20px;
+    /* Extend beyond the container */
+    left: -20px;
+    height: calc(100% + 40px);
+    /* Increase size to cover edges */
+    width: calc(100% + 40px);
+    background-image: inherit;
+    background-size: cover;
+    background-position: center;
+    filter: blur(7px);
+    z-index: -1;
+    pointer-events: none;
+}
+
+.container {
+    width: 100%;
+    padding: 1% 5%;
+    box-sizing: border-box;
+}
+
+.sections {
+    display: flex;
+    gap: 30px;
+}
+
+.sec1 {
+    width: 70%;
+}
+
+.screen {
+    width: 100%;
+    margin: auto;
+    /* overflow: hidden; */
+    background-color: transparent;
+    border-radius: 0 0 10px 10px;
+}
+
+.screen img {
+    width: 100%;
+}
+
+.infobar {
+    display: flex;
+    justify-content: space-between;
+    margin-top: -4px;
+    background-color: rgb(228, 228, 228);
+    border-radius: 0 0 10px 10px;
+}
+
+.infoflx {
+    display: flex;
+    gap: 10px;
+    padding: 15px;
+}
+
+.infoflx img {
+    height: 60px;
+    width: 60px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.infoname h1 {
+    margin: 0;
+    margin-top: 2px;
+    font-family: "Audiowide", sans-serif;
+    font-style: normal;
+    font-size: 20px;
+}
+
+.infoname p {
+    margin: 0;
+}
+
+.playNow {
+    display: flex;
+    align-items: center;
+    /* ✅ vertical centering */
+    justify-content: center;
+}
+
+.playNow button {
+    background: linear-gradient(145deg, #00ffff, #008080);
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 12px 28px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(0, 255, 255, 0.3);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+
+
+.playNow button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 20px rgba(0, 255, 255, 0.5);
+}
+
+.playNow button:active {
+    transform: scale(0.97);
+}
+
+.contt {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+    margin-right: 20px;
+}
+
+.btnn {
+    padding: 8px 16px;
+    font-size: 16px;
+    /* background-color: rgb(228, 228, 228); */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.sec2 {
+    background: rgba(255, 255, 255, 0.4);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(7px);
+    -webkit-backdrop-filter: blur(7px);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    width: 30%;
+    padding: 25px;
+    box-sizing: border-box;
+    height: 687px;
+    overflow: scroll;
+}
+
+.logo {
+    height: 100px;
+}
+
+.Detail {
+    background: rgba(255, 255, 255, 0.4);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(7px);
+    -webkit-backdrop-filter: blur(7px);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    margin: 5%;
+    padding: 20px;
+}
+
+.tabsWrapper {
+    margin-top: 20px;
+}
+
+.tabsHeader {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 20px;
+}
+
+.tabsHeader button {
+    border: none;
+    background: #e3e3e300;
+    padding: 10px 22px;
+    border-radius: 10px;
+    font-size: 15px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.activeTab {
+    background: linear-gradient(145deg, #00ffff, #008080) !important;
+    color: #ffffff;
+}
+
+.tabContent {
+    background: rgba(255, 255, 255, 0);
+    /* padding: 20px; */
+    border-radius: 8px;
+    color: #222;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.name {
+    font-family: "Audiowide", sans-serif;
+    font-style: normal;
+    font-size: 25px;
+}
+
+.rating {
+    background-color: rgba(255, 255, 255, 0.304);
+    width: 20%;
+    padding: 10px 10px 10px 10px;
+    box-sizing: border-box;
+    border-radius: 20px;
+    justify-content: space-around;
+    align-items: center;
+    display: flex;
+}
+
+.rating p {
+    margin: 0;
+    font-size: 20px;
+}
+
+.rating h2 {
+    margin: 0;
+    color: #636363;
+    font-size: 17px;
+    font-weight: 400;
+}
