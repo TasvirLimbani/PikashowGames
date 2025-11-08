@@ -235,3 +235,62 @@ body {
     font-size: 17px;
     font-weight: 400;
 }
+
+@media only screen and (max-width: 450px) {
+    .sections {
+        display: block;
+    }
+
+    .container {
+        padding: 2% 2%;
+    }
+
+    .sec1 {
+        width: 100%;
+    }
+
+    .infoflx {
+        gap: 5px;
+        padding: 15px 5px 15px 5px;
+    }
+
+    .infoname h1 {
+        font-size: 15px;
+    }
+
+    .infoname p {
+        font-size: 12px;
+    }
+
+    .playNow button {
+        font-size: 13px;
+        padding: 8px 10px;
+        border: none;
+        border-radius: 10px;
+        cursor: pointer;
+        box-shadow: 0 4px 15px rgba(0, 255, 255, 0.3);
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .contt {
+        gap: 5px;
+        margin-top: 10px;
+        margin-right: 5px;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .btnn {
+        padding: 8px 5px;
+    }
+
+    .sec2 {
+        margin-top: 20px;
+        width: 100%;
+    }
+
+    .rating {
+        width: 65%;
+    }
+
+}

@@ -1,15 +1,15 @@
 // firebase.js
-import { initializeApp } from 'firebase/app';
-import { getFirestore } from 'firebase/firestore';
+import { initializeApp } from "firebase/app";
+import { getFirestore } from "firebase/firestore";
 
 const firebaseConfig = {
   apiKey: "",
   authDomain: ".firebaseapp.com",
   projectId: "",
-  storageBucket: "firebasestorage.app",
+  storageBucket: ".firebasestorage.app",
   messagingSenderId: "",
-  appId: "1:web:8c8add22840a8041afe823",
-  measurementId: "G"
+  appId: "1:8c8add22840a8041afe823",
+  measurementId: "G-25TJS8XJ3D",
 };
 
 // ✅ Initialize Firebase first

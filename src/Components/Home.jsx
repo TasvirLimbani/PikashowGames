@@ -110,9 +110,11 @@
 
 // export default Home;
 
+
 import { useNavigate } from "react-router-dom";
 import React, { useEffect, useState } from "react";
 import Style from "./Home.module.css";
+import Footer from "./Footer";
 
 const Home = () => {
   const pageSize = 150;
@@ -173,70 +175,70 @@ const Home = () => {
   }, []);
 
   return (
-    <div className={Style.main}>
-      <div className={Style.container}>
-        {/* ✅ Show loader while fetching */}
-        {loading && (
-          <p style={{ textAlign: "center", marginTop: "40px" }}>Loading...</p>
-        )}
+    <div className={ Style.main }>
+      <div className={ Style.container }>
 
-        {/* ✅ Show games only when NOT loading */}
-        {!loading && (
+        {/* ✅ Show loader while fetching */ }
+        { loading && (
+          <p style={ { textAlign: "center", marginTop: "40px" , height:"100vh", width:"100%"} }>Loading...</p>
+        ) }
+
+        {/* ✅ Show games only when NOT loading */ }
+        { !loading && (
           <>
-            <div className={Style.games}>
-              {displayed.map((item) => (
+            <div className={ Style.games }>
+              { displayed.map((item) => (
                 <div
-                  className={Style.box1}
-                  key={item.id}
-                  onClick={() =>
-                    navigate(`/details/${item.id}`, { state: item })
-                  }
+                  className={ Style.box1 }
+                  key={ item.id }
+                  onClick={ () => navigate(`/details/${item.id}`, { state: item }) }
                 >
                   <img
-                    src={`https://slides.atmegame.com/slide/${item.image}_slide.jpg`}
-                    alt={item.title || "Game"}
+                    src={ `https://slides.atmegame.com/slide/${item.image}_slide.jpg` }
+                    alt={ item.title || "Game" }
                   />
                 </div>
-              ))}
+              )) }
             </div>
 
-            {/* ✅ Pagination only when data loaded */}
-            {totalPages > 1 && (
-              <div style={{ textAlign: "center", marginTop: "20px" }}>
+            {/* ✅ Pagination only when data loaded */ }
+            { totalPages > 1 && (
+              <div style={ { textAlign: "center", marginTop: "20px" } }>
                 <button
-                  disabled={page === 1}
-                  onClick={() => goToPage(page - 1)}
-                  style={btnStyle}
+                  disabled={ page === 1 }
+                  onClick={ () => goToPage(page - 1) }
+                  style={ btnStyle }
                 >
                   Prev
                 </button>
 
-                {pageNumbers().map((num) => (
+                { pageNumbers().map((num) => (
                   <button
-                    key={num}
-                    style={{
+                    key={ num }
+                    style={ {
                       ...btnStyle,
                       background: num === page ? "#000" : "#eee",
                       color: num === page ? "#fff" : "#000",
-                    }}
-                    onClick={() => goToPage(num)}
+                    } }
+                    onClick={ () => goToPage(num) }
                   >
-                    {num}
+                    { num }
                   </button>
-                ))}
+                )) }
 
                 <button
-                  disabled={page === totalPages}
-                  onClick={() => goToPage(page + 1)}
-                  style={btnStyle}
+                  disabled={ page === totalPages }
+                  onClick={ () => goToPage(page + 1) }
+                  style={ btnStyle }
                 >
                   Next
                 </button>
               </div>
-            )}
+            ) }
           </>
-        )}
+        ) }
       </div>
+      <Footer />
     </div>
   );
 };
