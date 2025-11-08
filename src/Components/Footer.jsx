@@ -33,11 +33,11 @@ const Footer = () => {
 
                 <div className={ Style.social }>
                     <h4>Follow Us</h4>
-                    <div className={ Style.icons }>
-                        <a ><i className="fa-brands fa-facebook"></i></a>
-                        <a ><i className="fa-brands fa-twitter"></i></a>
-                        <a ><i className="fa-brands fa-youtube"></i></a>
-                    </div>
+                    {/* <div className={ Style.icons }>
+                        <a><i className="fa-brands fa-facebook"></i></a>
+                        <a><i className="fa-brands fa-twitter"></i></a>
+                        < ><i className="fa-brands fa-youtube"></i></a>
+                    </div> */}
                 </div>
             </div>
 
